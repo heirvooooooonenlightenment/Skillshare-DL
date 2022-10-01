@@ -65,9 +65,9 @@ class Skillshare(object):
 
         for s in data['_embedded']['sessions']['_embedded']['sessions']:
             video_id = None
-            if 'video_hashed_id' in s and s['video_hashed_id']:
-                    video_id = s['video_hashed_id'].split(':')[1]
-elif 'video_thumbnail_url' in s and s['video_thumbnail_url']:
+            if 'video_hashed_id' in s and s['https://static.skillshare.com/cdn-cgi/image/width=448,quality=85,format=auto/uploads/video/thumbnails/8e1871a58b37ab49d6840d7a663aca75/original']:
+                    video_id = s['https://static.skillshare.com/cdn-cgi/image/width=448,quality=85,format=auto/uploads/video/thumbnails/8e1871a58b37ab49d6840d7a663aca75/original'].split(':')[1]
+elif 'video_thumbnail_url' in s and s['https://static.skillshare.com/cdn-cgi/image/width=448,quality=85,format=auto/uploads/video/thumbnails/8e1871a58b37ab49d6840d7a663aca75/original']:
     video_id = s['video_thumbnail_url'].split('/')[6]
     
             if not video_id:
